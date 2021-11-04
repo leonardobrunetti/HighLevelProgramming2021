@@ -1,0 +1,25 @@
+#(A)
+import numpy as np
+def quad_eq(a,b,c):
+    delta = (b**2) - (4*a*c)
+    x1 = (- b - np.sqrt(delta)) / (2*a)
+    x2 = (- b + np.sqrt(delta)) / (2*a)
+    print(x1, x2)
+    
+#(B)
+import numpy as np
+def quad_eq2(a,b,c):
+    delta = (b**2) - (4*a*c)    
+    x1 = ((- b - np.sqrt(delta)) / (2*a)) * (-b+delta) / (-b+delta)
+    x2 = ((- b + np.sqrt(delta)) / (2*a)) * (-b-delta) / (-b-delta)
+    print(x1, x2) 
+   
+#(C)
+def root_quad(a,b,c):
+    delta = (b**2) - (4*a*c)
+    if delta < 0:
+        print("no real solutions")
+    elif delta >= 0:    
+        x1 = ((- b - np.sqrt(delta)) / (2*a)) * (-b+delta) / (-b+delta)
+        x2 = ((- b + np.sqrt(delta)) / (2*a)) * (-b-delta) / (-b-delta)
+        print(x1, x2) 
